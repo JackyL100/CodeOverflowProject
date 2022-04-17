@@ -152,7 +152,7 @@ int main() {
     }
     thr.join();
     std::cout << "Time's up!" << std::endl;
-    std::cout << "Questions Completed :" << questions << "\n";
+    std::cout << "Questions Completed: " << questions << "\n";
     SDL_DestroyRenderer(renderTarget);
     SDL_DestroyWindow(window);
     SDL_DestroyTexture(texture);
