@@ -104,7 +104,7 @@ int main() {
                     answer::answers[i]->hitbox.x = randNum(0, WIDTH - 100);
                     answer::answers[i]->hitbox.y = randNum(0, HEIGHT - 100);
                 } while (SDL_HasIntersection(&answer::answers[i]->hitbox, &p.hitbox) || SDL_HasIntersection(&answer::answers[i]->hitbox, &MessageRect)
-                || (!answer::checkUnique(answer::answers[i], i)));
+                || (!answer::checkUnique(answer::answers[i], i)) || SDL_HasIntersection(&answer::answers[i]->hitbox, &scorebox));
             }
         }
         SDL_RenderClear(renderTarget);
